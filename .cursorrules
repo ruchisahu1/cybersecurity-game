@@ -1,0 +1,103 @@
+# CYBERSECURITY GAME - CONTEXT (NOT INSTRUCTIONS)
+
+## Project Type
+Educational cybersecurity investigation game (Next.js 14 + TypeScript + Tailwind)
+
+## Tech Stack
+- Next.js 14 (App Router)
+- React 18 + TypeScript
+- Tailwind CSS only
+- localStorage for state
+- NO backend/database
+
+## Code Standards
+
+### TypeScript
+- Use strict mode
+- Define interfaces for all data
+- Avoid `any` type
+
+### React Patterns
+```typescript
+// Use this pattern for components:
+export function ComponentName({ prop }: Props) {
+  const { state, dispatch } = useGame();
+  
+  const handleAction = useCallback(() => {
+    // validation
+    // dispatch action
+    // side effects
+  }, [deps]);
+  
+  return {/* JSX */};
+}
+```
+
+### Tailwind
+- Mobile-first (base, then md:, lg:)
+- Use design system colors
+- Avoid arbitrary values
+
+### State Management
+```typescript
+// GameContext pattern:
+interface GameState {
+  credits: number;
+  unlockedClues: string[];
+  viewedClues: string[];
+  chatHistory: ChatMessage[];
+  accusationsMade: Accusation[];
+  recoveryActions: string[];
+  glossaryLookups: string[];
+  gamePhase: 'investigation' | 'recovery' | 'ended';
+  currentTab: string;
+  endingType: 'A' | 'B' | 'C' | 'D' | null;
+}
+
+type GameAction = 
+  | { type: 'SPEND_CREDITS'; amount: number }
+  | { type: 'UNLOCK_CLUE'; clueId: string }
+  | { type: 'MAKE_ACCUSATION'; suspectId: string };
+```
+
+## File Structure
+```
+app/          # Next.js pages
+components/   # React components
+context/      # GameContext
+data/         # Game content (clues, suspects, glossary)
+lib/          # Utilities
+types/        # TypeScript interfaces
+```
+
+## DO ✅
+- Show credit cost on ALL buttons
+- Confirm expensive actions (10+ credits)
+- Make terms clickable with [?] icon
+- Auto-save to localStorage
+- Test on mobile (320px) and desktop
+- Use semantic HTML + ARIA labels
+
+## DON'T ❌
+- Don't show locked content before unlock
+- Don't use external APIs
+- Don't allow accidental credit spending
+- Don't use custom CSS (Tailwind only)
+- Don't generate ALL code at once (wait for requests)
+
+## Response Format
+When I ask you to build something, provide:
+1. File path
+2. Complete code (no placeholders)
+3. Brief explanation
+4. What to test
+
+## Reference Files
+- Full game design: docs/BLUEPRINT.md
+- Component details: docs/COMPONENT_GUIDE.md
+
+---
+
+IMPORTANT: Only build what I explicitly ask for. 
+Don't assume next steps. Wait for my instruction.
+```
