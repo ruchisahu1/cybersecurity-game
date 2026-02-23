@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "CyberSleuth - Account Recovery Investigation Game",
+  title: "AI Cyber Detective - Account Recovery Investigation Game",
   description: "An educational cybersecurity investigation game where you solve account takeover cases",
 };
 

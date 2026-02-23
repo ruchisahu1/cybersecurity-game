@@ -48,7 +48,7 @@ export function Header({ onReplayTutorial, onResetGame }: HeaderProps) {
             <span className="text-2xl" aria-hidden="true">🔐</span>
             <div>
               <h1 className="text-xl font-bold text-white tracking-tight">
-                CyberSleuth
+                AI Cyber Detective
               </h1>
               <p className="text-xs text-slate-400">
                 Account Recovery Investigation

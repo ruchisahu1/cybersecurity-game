@@ -29,7 +29,7 @@ export default function HomePage() {
 
         {/* Title */}
         <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-          CyberSleuth
+          AI Cyber Detective
         </h1>
         <p className="text-xl text-cyan-400 font-medium mb-2">
           Account Recovery Investigation
