@@ -206,6 +206,7 @@ function generateEndingA(stats: GameStats): Ending {
       { id: 'next_case', label: 'Play Next Case', icon: '▶️', primary: true },
       { id: 'share', label: 'Share Score', icon: '📤' },
       { id: 'review', label: 'Review Case', icon: '📋' },
+      { id: 'home', label: 'Home', icon: '🚪' },
     ],
   };
 }
@@ -274,6 +275,7 @@ function generateEndingB(stats: GameStats): Ending {
       { id: 'retry', label: 'Try Again', icon: '🔄' },
       { id: 'next_case', label: 'Play Next Case', icon: '▶️', primary: true },
       { id: 'review', label: 'Review Case', icon: '📋' },
+      { id: 'home', label: 'Home', icon: '🚪' },
     ],
   };
 }
@@ -340,6 +342,7 @@ function generateEndingC(stats: GameStats): Ending {
       { id: 'retry', label: 'Retry Case', icon: '🔄', primary: true },
       { id: 'solution', label: 'View Solution', icon: '💡' },
       { id: 'next_case', label: 'Next Case', icon: '▶️' },
+      { id: 'home', label: 'Home', icon: '🚪' },
     ],
   };
 }

@@ -166,6 +166,10 @@ export function EndingScreen() {
         // Would navigate to tutorial
         alert('Tutorial coming soon!');
         break;
+
+      case 'home':
+        window.location.href = "https://missionx.junkbot.co/user/gamified";
+        break;
     }
   }, [dispatch, handleRetry, handleShare]);
 
@@ -366,7 +370,7 @@ export function EndingScreen() {
         {/* Footer */}
         <div className="mt-8 text-center">
           <p className="text-slate-500 text-sm">
-            CyberSleuth - Case #1: The Account Takeover
+            AI Cyber Detective - Case #1: The Account Takeover
           </p>
           <p className="text-slate-600 text-xs mt-1">
             An educational cybersecurity investigation game
